@@ -6,8 +6,10 @@
         xmlns:ui="http://schemas.modernwpf.com/2019"
         xmlns:local="clr-namespace:ModernWpf" 
         mc:Ignorable="d"
-        Title="MessageBox" SizeToContent="WidthAndHeight"
+        Title="MessageBox"
+        SizeToContent="WidthAndHeight"
         WindowStyle="ToolWindow"
+        ResizeMode="NoResize"
         ui:WindowHelper.UseModernWindowStyle="True">
     <ui:SimpleStackPanel Orientation="Vertical" Margin="10 5 10 10" Spacing="10">
         <ui:SimpleStackPanel Orientation="Horizontal" Spacing="10">
