@@ -6,7 +6,8 @@ namespace ModernWpfMessageBox.Test {
         protected override void OnStartup(StartupEventArgs e) {
             base.OnStartup(e);
 
-            ModernWpf.MessageBox.Show("Test");
+            MessageBox.Show("This is a test text!", "Some title", MessageBoxButton.YesNoCancel, MessageBoxImage.Question);
+            ModernWpf.MessageBox.Show("This is a test text!", "Some title", MessageBoxButton.YesNoCancel, MessageBoxImage.Question);
         }
 
     }
