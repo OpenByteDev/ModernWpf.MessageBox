@@ -16,7 +16,7 @@
             <ui:FontIcon x:Name="symbolIcon" Visibility="Collapsed" FontSize="30" />
             <TextBlock x:Name="messageText" VerticalAlignment="Center" />
         </ui:SimpleStackPanel>
-        <ui:SimpleStackPanel Orientation="Horizontal" Spacing="10">
+        <ui:SimpleStackPanel Orientation="Horizontal" Spacing="10" HorizontalAlignment="Center">
             <Button x:Name="okButton" Content="Ok" Width="75" Visibility="Collapsed" />
             <Button x:Name="yesButton" Content="Yes" Width="75" Visibility="Collapsed" />
             <Button x:Name="noButton" Content="No" Width="75" Visibility="Collapsed" />
