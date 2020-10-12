@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30524.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModernWpfMessageBox", "ModernWpfMessageBox\ModernWpfMessageBox.csproj", "{35816B23-A5DE-4F89-987C-8E544712C8F1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModernWpf.MessageBox", "ModernWpf.MessageBox\ModernWpf.MessageBox.csproj", "{35816B23-A5DE-4F89-987C-8E544712C8F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModernWpfMessageBox.Test", "ModernWpfMessageBox.Test\ModernWpfMessageBox.Test.csproj", "{4C7B25D1-91CC-438B-AF6A-5C7FCB94AB84}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModernWpf.MessageBox.Test", "ModernWpf.MessageBox.Test\ModernWpf.MessageBox.Test.csproj", "{4C7B25D1-91CC-438B-AF6A-5C7FCB94AB84}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
