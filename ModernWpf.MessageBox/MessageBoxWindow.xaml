@@ -10,6 +10,7 @@
         SizeToContent="WidthAndHeight"
         WindowStyle="ToolWindow"
         ResizeMode="NoResize"
+        WindowStartupLocation="CenterOwner"
         ui:WindowHelper.UseModernWindowStyle="True">
     <ui:SimpleStackPanel Orientation="Vertical" Margin="10 5 10 10" Spacing="10">
         <ui:SimpleStackPanel Orientation="Horizontal" Spacing="10">
