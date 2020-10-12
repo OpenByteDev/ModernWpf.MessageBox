@@ -6,8 +6,8 @@
     <Authors>OpenByte</Authors>
     <Product>ModernWpf.MessageBox</Product>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/OpenByteDev/EZBlocker3/ModernWpf.MessageBox</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/OpenByteDev/EZBlocker3/ModernWpf.MessageBox</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/OpenByteDev/ModernWpf.MessageBox</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/OpenByteDev/ModernWpf.MessageBox</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>WPF XAML UI Theme Controls Fluent Modern Metro WinUI</PackageTags>
     <Version>0.1.0</Version>
@@ -15,6 +15,7 @@
 
   <PropertyGroup>
     <RootNamespace>ModernWpf</RootNamespace>
+    <OutputType>Library</OutputType>
     <TargetFrameworks>net45;net462;netcoreapp3.0</TargetFrameworks>
     <LangVersion>8.0</LangVersion>
     <NeutralLanguage>en-US</NeutralLanguage>
