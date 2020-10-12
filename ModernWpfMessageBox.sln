@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30524.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModernWpfMessageBox", "ModernWpfMessageBox\ModernWpfMessageBox.csproj", "{35816B23-A5DE-4F89-987C-8E544712C8F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModernWpfMessageBox.Test", "ModernWpfMessageBox.Test\ModernWpfMessageBox.Test.csproj", "{4C7B25D1-91CC-438B-AF6A-5C7FCB94AB84}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{35816B23-A5DE-4F89-987C-8E544712C8F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35816B23-A5DE-4F89-987C-8E544712C8F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35816B23-A5DE-4F89-987C-8E544712C8F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35816B23-A5DE-4F89-987C-8E544712C8F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C7B25D1-91CC-438B-AF6A-5C7FCB94AB84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C7B25D1-91CC-438B-AF6A-5C7FCB94AB84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C7B25D1-91CC-438B-AF6A-5C7FCB94AB84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C7B25D1-91CC-438B-AF6A-5C7FCB94AB84}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {08E9DC5C-D9CB-41CE-B19E-DF0C2F512D43}
+	EndGlobalSection
+EndGlobal
