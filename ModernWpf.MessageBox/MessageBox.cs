@@ -7,62 +7,60 @@ namespace ModernWpf {
     public static class MessageBox {
 
         public static MessageBoxResult? Show(string messageBoxText) =>
-            ShowInternal(null, messageBoxText, null, null, null, null);
-        public static MessageBoxResult? Show(string messageBoxText, string caption) =>
-            ShowInternal(null, messageBoxText, caption, null, null, null);
-        public static MessageBoxResult? Show(string messageBoxText, string caption, MessageBoxButton button) =>
-            ShowInternal(null, messageBoxText, caption, button, null, null);
-        public static MessageBoxResult? Show(string messageBoxText, string caption, MessageBoxButton button, Symbol symbol) =>
-            ShowInternal(null, messageBoxText, caption, button, symbol, null);
-        public static MessageBoxResult? Show(string messageBoxText, string caption, MessageBoxButton button, MessageBoxImage image) =>
-            ShowInternal(null, messageBoxText, caption, button, image, null);
-        public static MessageBoxResult Show(string messageBoxText, string caption, MessageBoxButton button, Symbol symbol, MessageBoxResult defaultResult) =>
-            ShowInternal(null, messageBoxText, caption, button, symbol, defaultResult);
-        public static MessageBoxResult Show(string messageBoxText, string caption, MessageBoxButton button, SymbolGlyph symbol, MessageBoxResult defaultResult) =>
-            ShowInternal(null, messageBoxText, caption, button, symbol, defaultResult);
-        public static MessageBoxResult Show(string messageBoxText, string caption, MessageBoxButton button, MessageBoxImage image, MessageBoxResult defaultResult) =>
-            ShowInternal(null, messageBoxText, caption, button, image, defaultResult);
-        public static MessageBoxResult? Show(string messageBoxText, string caption, MessageBoxButton button, Symbol symbol, MessageBoxResult? defaultResult) =>
-            ShowInternal(null, messageBoxText, caption, button, symbol, defaultResult);
-        public static MessageBoxResult? Show(string messageBoxText, string caption, MessageBoxButton button, SymbolGlyph symbol, MessageBoxResult? defaultResult) =>
-            ShowInternal(null, messageBoxText, caption, button, symbol, defaultResult);
-        public static MessageBoxResult? Show(string messageBoxText, string caption, MessageBoxButton button, MessageBoxImage image, MessageBoxResult? defaultResult) =>
-            ShowInternal(null, messageBoxText, caption, button, image, defaultResult);
-        public static MessageBoxResult? Show(Window owner, string messageBoxText) =>
-            ShowInternal(owner, messageBoxText, null, null, null, null);
-        public static MessageBoxResult? Show(Window owner, string messageBoxText, string caption) =>
-            ShowInternal(owner, messageBoxText, caption, null, null, null);
-        public static MessageBoxResult? Show(Window owner, string messageBoxText, string caption, MessageBoxButton button) =>
-            ShowInternal(owner, messageBoxText, caption, button, null, null);
-        public static MessageBoxResult? Show(Window owner, string messageBoxText, string caption, MessageBoxButton button, Symbol symbol) =>
-            ShowInternal(owner, messageBoxText, caption, button, symbol, null);
-        public static MessageBoxResult? Show(Window owner, string messageBoxText, string caption, MessageBoxButton button, MessageBoxImage image) =>
-            ShowInternal(owner, messageBoxText, caption, button, image, null);
-        public static MessageBoxResult Show(Window owner, string messageBoxText, string caption, MessageBoxButton button, Symbol symbol, MessageBoxResult defaultResult) =>
-            ShowInternal(owner, messageBoxText, caption, button, symbol, defaultResult);
-        public static MessageBoxResult Show(Window owner, string messageBoxText, string caption, MessageBoxButton button, SymbolGlyph symbol, MessageBoxResult defaultResult) =>
-            ShowInternal(owner, messageBoxText, caption, button, symbol, defaultResult);
-        public static MessageBoxResult Show(Window owner, string messageBoxText, string caption, MessageBoxButton button, MessageBoxImage image, MessageBoxResult defaultResult) =>
-            ShowInternal(owner, messageBoxText, caption, button, image, defaultResult);
-        public static MessageBoxResult? Show(Window owner, string messageBoxText, string caption, MessageBoxButton button, Symbol symbol, MessageBoxResult? defaultResult) =>
-            ShowInternal(owner, messageBoxText, caption, button, symbol, defaultResult);
-        public static MessageBoxResult? Show(Window owner, string messageBoxText, string caption, MessageBoxButton button, SymbolGlyph symbol, MessageBoxResult? defaultResult) =>
-            ShowInternal(owner, messageBoxText, caption, button, symbol, defaultResult);
-        public static MessageBoxResult? Show(Window owner, string messageBoxText, string caption, MessageBoxButton button, MessageBoxImage image, MessageBoxResult? defaultResult) =>
-            ShowInternal(owner, messageBoxText, caption, button, image, defaultResult);
+            Show(null, messageBoxText, null, null, null, null);
+        public static MessageBoxResult? Show(string messageBoxText, string? caption) =>
+            Show(null, messageBoxText, caption, null, null, null);
+        public static MessageBoxResult? Show(string messageBoxText, string? caption, MessageBoxButton button) =>
+            Show(null, messageBoxText, caption, button, null, null);
+        public static MessageBoxResult? Show(string messageBoxText, string? caption, MessageBoxButton button, Symbol symbol) =>
+            Show(null, messageBoxText, caption, button, symbol, null);
+        public static MessageBoxResult? Show(string messageBoxText, string? caption, MessageBoxButton button, SymbolGlyph symbol) =>
+            Show(null, messageBoxText, caption, button, symbol, null);
+        public static MessageBoxResult? Show(string messageBoxText, string? caption, MessageBoxButton button, MessageBoxImage image) =>
+            Show(null, messageBoxText, caption, button, image, null);
+        public static MessageBoxResult Show(string messageBoxText, string? caption, MessageBoxButton button, Symbol symbol, MessageBoxResult defaultResult) =>
+            Show(null, messageBoxText, caption, button, symbol, defaultResult);
+        public static MessageBoxResult? Show(string messageBoxText, string? caption, MessageBoxButton button, Symbol symbol, MessageBoxResult? defaultResult) =>
+            Show(null, messageBoxText, caption, button, symbol, defaultResult);
+        public static MessageBoxResult Show(string messageBoxText, string? caption, MessageBoxButton button, SymbolGlyph symbol, MessageBoxResult defaultResult) =>
+            Show(null, messageBoxText, caption, button, symbol, defaultResult);
+        public static MessageBoxResult? Show(string messageBoxText, string? caption, MessageBoxButton button, SymbolGlyph symbol, MessageBoxResult? defaultResult) =>
+            Show(null, messageBoxText, caption, button, symbol, defaultResult);
+        public static MessageBoxResult Show(string messageBoxText, string? caption, MessageBoxButton button, MessageBoxImage image, MessageBoxResult defaultResult) =>
+            Show(null, messageBoxText, caption, button, image, defaultResult);
+        public static MessageBoxResult? Show(string messageBoxText, string? caption, MessageBoxButton button, MessageBoxImage image, MessageBoxResult? defaultResult) =>
+            Show(null, messageBoxText, caption, button, image, defaultResult);
+        public static MessageBoxResult? Show(Window? owner, string messageBoxText) =>
+            Show(owner, messageBoxText, null, null, null, null);
+        public static MessageBoxResult? Show(Window? owner, string messageBoxText, string? caption) =>
+            Show(owner, messageBoxText, caption, null, null, null);
+        public static MessageBoxResult? Show(Window? owner, string messageBoxText, string? caption, MessageBoxButton? button) =>
+            Show(owner, messageBoxText, caption, button, null, null);
+        public static MessageBoxResult? Show(Window? owner, string messageBoxText, string? caption, MessageBoxButton? button, Symbol symbol) =>
+            Show(owner, messageBoxText, caption, button, symbol, null);
+        public static MessageBoxResult? Show(Window? owner, string messageBoxText, string? caption, MessageBoxButton? button, SymbolGlyph symbol) =>
+            Show(owner, messageBoxText, caption, button, symbol, null);
+        public static MessageBoxResult? Show(Window? owner, string messageBoxText, string? caption, MessageBoxButton? button, MessageBoxImage image) =>
+            Show(owner, messageBoxText, caption, button, image, null);
+        public static MessageBoxResult? Show(Window? owner, string messageBoxText, string? caption, MessageBoxButton? button, string? glyph) =>
+            Show(owner, messageBoxText, caption, button, glyph, null);
+        public static MessageBoxResult Show(Window? owner, string messageBoxText, string? caption, MessageBoxButton? button, Symbol symbol, MessageBoxResult defaultResult) =>
+            Show(owner, messageBoxText, caption, button, symbol.ToGlyph(), defaultResult);
+        public static MessageBoxResult? Show(Window? owner, string messageBoxText, string? caption, MessageBoxButton? button, Symbol symbol, MessageBoxResult? defaultResult) =>
+            Show(owner, messageBoxText, caption, button, symbol.ToGlyph(), defaultResult);
+        public static MessageBoxResult Show(Window? owner, string messageBoxText, string? caption, MessageBoxButton? button, SymbolGlyph symbol, MessageBoxResult defaultResult) =>
+            Show(owner, messageBoxText, caption, button, symbol.ToGlyph(), defaultResult);
+        public static MessageBoxResult? Show(Window? owner, string messageBoxText, string? caption, MessageBoxButton? button, SymbolGlyph symbol, MessageBoxResult? defaultResult) =>
+            Show(owner, messageBoxText, caption, button, symbol.ToGlyph(), defaultResult);
+        public static MessageBoxResult Show(Window? owner, string messageBoxText, string? caption, MessageBoxButton? button, MessageBoxImage image, MessageBoxResult defaultResult) =>
+            Show(owner, messageBoxText, caption, button, image.ToSymbol(), defaultResult);
+        public static MessageBoxResult? Show(Window? owner, string messageBoxText, string? caption, MessageBoxButton? button, MessageBoxImage image, MessageBoxResult? defaultResult) =>
+            Show(owner, messageBoxText, caption, button, image.ToSymbol(), defaultResult);
+        public static MessageBoxResult Show(Window? owner, string messageBoxText, string? caption, MessageBoxButton? button, string? glyph, MessageBoxResult defaultResult) =>
+            ShowInternal(owner, messageBoxText, caption, button, glyph, defaultResult);
+        public static MessageBoxResult? Show(Window? owner, string messageBoxText, string? caption, MessageBoxButton? button, string? glyph, MessageBoxResult? defaultResult) =>
+            ShowInternal(owner, messageBoxText, caption, button, glyph, defaultResult);
 
-        private static MessageBoxResult ShowInternal(Window? owner, string messageBoxText, string? caption, MessageBoxButton? button, Symbol symbol, MessageBoxResult defaultResult) =>
-            ShowInternal(owner, messageBoxText, caption, button, symbol.ToGlyph(), defaultResult);
-        private static MessageBoxResult ShowInternal(Window? owner, string messageBoxText, string? caption, MessageBoxButton? button, SymbolGlyph symbol, MessageBoxResult defaultResult) =>
-            ShowInternal(owner, messageBoxText, caption, button, symbol.ToGlyph(), defaultResult);
-        private static MessageBoxResult ShowInternal(Window? owner, string messageBoxText, string? caption, MessageBoxButton? button, MessageBoxImage image, MessageBoxResult defaultResult) =>
-            ShowInternal(owner, messageBoxText, caption, button, image.ToSymbol(), defaultResult);
-        private static MessageBoxResult? ShowInternal(Window? owner, string messageBoxText, string? caption, MessageBoxButton? button, Symbol symbol, MessageBoxResult? defaultResult) =>
-            ShowInternal(owner, messageBoxText, caption, button, symbol.ToGlyph(), defaultResult);
-        private static MessageBoxResult? ShowInternal(Window? owner, string messageBoxText, string? caption, MessageBoxButton? button, SymbolGlyph symbol, MessageBoxResult? defaultResult) =>
-            ShowInternal(owner, messageBoxText, caption, button, symbol.ToGlyph(), defaultResult);
-        private static MessageBoxResult? ShowInternal(Window? owner, string messageBoxText, string? caption, MessageBoxButton? button, MessageBoxImage image, MessageBoxResult? defaultResult) =>
-            ShowInternal(owner, messageBoxText, caption, button, image.ToSymbol(), defaultResult);
         private static MessageBoxResult ShowInternal(Window? owner, string messageBoxText, string? caption, MessageBoxButton? button, string? glyph, MessageBoxResult defaultResult) =>
             ShowInternal(owner, messageBoxText, caption, button, glyph, defaultResult);
         private static MessageBoxResult? ShowInternal(Window? owner, string messageBoxText, string? caption, MessageBoxButton? button, string? glyph, MessageBoxResult? defaultResult) {
