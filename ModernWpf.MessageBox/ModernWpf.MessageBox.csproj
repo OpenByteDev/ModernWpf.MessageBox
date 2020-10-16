@@ -2,15 +2,16 @@
 
   <PropertyGroup>
     <Company>OpenByte</Company>
-    <PackageId>ModernWpf.MessageBox</PackageId>
     <Authors>OpenByte</Authors>
+    <PackageId>ModernWpf.MessageBox</PackageId>
     <Product>ModernWpf.MessageBox</Product>
+    <Description>An alternative to System.Windows.MessageBox using ModernWpfUI windows.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/OpenByteDev/ModernWpf.MessageBox</PackageProjectUrl>
     <RepositoryUrl>https://github.com/OpenByteDev/ModernWpf.MessageBox</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>WPF XAML UI Theme Controls Fluent Modern Metro WinUI</PackageTags>
-    <Version>0.2.0</Version>
+    <Version>0.3.0</Version>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -22,8 +23,7 @@
     <UseWPF>True</UseWPF>
     <UseWinRT>True</UseWinRT>
     <Nullable>Enable</Nullable>
-    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
-    <Description>An alternative to System.Windows.MessageBox using ModernWpfUI windows.</Description>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)'=='Release'">
