@@ -14,7 +14,7 @@ Install-Package ModernWpf.MessageBox
 
 ## Usage
 A simple usage example:
-```
+```cs
 MessageBox.Show("This is a test text!", "Some title", MessageBoxButton.YesNoCancel, MessageBoxImage.Question);
 ```
 **ModernWPF.MessageBox**
