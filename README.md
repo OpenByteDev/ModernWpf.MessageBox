@@ -1,6 +1,7 @@
 # ModernWpf.MessageBox
 
 ![nuget badge](https://badgen.net/nuget/v/modernwpf.messagebox)
+[![Unlicense](https://img.shields.io/github/license/OpenByteDev/ModernWpf.MessageBox)](./LICENSE)
 
 A drop-in replacement for `System.Windows.MessageBox` (and `System.Windows.Forms.MessageBox`) built using a [Modern WPF UI](https://github.com/Kinnara/ModernWpf).
 
@@ -8,7 +9,7 @@ A drop-in replacement for `System.Windows.MessageBox` (and `System.Windows.Forms
 
 To install with NuGet use the following command in the Packet Manager Console:
 ```
-Install-Package MessagePack
+Install-Package ModernWpf.MessageBox
 ```
 
 ## Usage
