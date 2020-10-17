@@ -1,6 +1,6 @@
 # ModernWpf.MessageBox
 
-![nuget badge](https://badgen.net/nuget/v/modernwpf.messagebox)
+[![nuget badge](https://badgen.net/nuget/v/modernwpf.messagebox)](https://www.nuget.org/packages/ModernWpf.MessageBox/)
 [![Unlicense](https://img.shields.io/github/license/OpenByteDev/ModernWpf.MessageBox)](./LICENSE)
 
 A drop-in replacement for `System.Windows.MessageBox` (and `System.Windows.Forms.MessageBox`) built using a [Modern WPF UI](https://github.com/Kinnara/ModernWpf).
