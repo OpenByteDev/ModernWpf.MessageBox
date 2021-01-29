@@ -12,10 +12,10 @@
         ResizeMode="NoResize"
         WindowStartupLocation="CenterOwner"
         ui:WindowHelper.UseModernWindowStyle="True">
-    <ui:SimpleStackPanel Orientation="Vertical" Margin="10 5 10 10" Spacing="10">
-        <ui:SimpleStackPanel Orientation="Horizontal" Spacing="10">
+    <ui:SimpleStackPanel Orientation="Vertical" Margin="10 5 10 10" Spacing="20">
+        <ui:SimpleStackPanel Orientation="Horizontal" Spacing="10" Margin="0 0 15 0" >
             <ui:FontIcon x:Name="symbolIcon" Visibility="Collapsed" FontSize="30" />
-            <TextBlock x:Name="messageText" VerticalAlignment="Center" />
+            <TextBlock x:Name="messageText" TextWrapping="Wrap" Height="auto" MaxWidth="375" />
         </ui:SimpleStackPanel>
         <ui:SimpleStackPanel Orientation="Horizontal" Spacing="10" HorizontalAlignment="Center">
             <Button x:Name="okButton" Content="Ok" Width="75" Visibility="Collapsed" />
