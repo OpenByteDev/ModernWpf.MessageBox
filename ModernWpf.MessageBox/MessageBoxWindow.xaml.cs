@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows;
+using DialogBoxCommand = ModernWpf.LocalizedDialogCommands.DialogBoxCommand;
 
 namespace ModernWpf {
     public partial class MessageBoxWindow : Window {
@@ -15,19 +16,39 @@ namespace ModernWpf {
             switch (button) {
                 case MessageBoxButton.OK:
                     okButton.Visibility = Visibility.Visible;
+
+                    if (MessageBox.EnableLocalization) {
+                        okButton.Content = LocalizedDialogCommands.GetString(DialogBoxCommand.IDOK);
+                    }
                     break;
                 case MessageBoxButton.OKCancel:
                     okButton.Visibility = Visibility.Visible;
                     cancelButton.Visibility = Visibility.Visible;
+
+                    if (MessageBox.EnableLocalization) {
+                        okButton.Content = LocalizedDialogCommands.GetString(DialogBoxCommand.IDOK);
+                        cancelButton.Content = LocalizedDialogCommands.GetString(DialogBoxCommand.IDCANCEL);
+                    }
                     break;
                 case MessageBoxButton.YesNo:
                     yesButton.Visibility = Visibility.Visible;
                     noButton.Visibility = Visibility.Visible;
+
+                    if (MessageBox.EnableLocalization) {
+                        yesButton.Content = LocalizedDialogCommands.GetString(DialogBoxCommand.IDYES);
+                        noButton.Content = LocalizedDialogCommands.GetString(DialogBoxCommand.IDNO);
+                    }
                     break;
                 case MessageBoxButton.YesNoCancel:
                     yesButton.Visibility = Visibility.Visible;
                     noButton.Visibility = Visibility.Visible;
                     cancelButton.Visibility = Visibility.Visible;
+
+                    if (MessageBox.EnableLocalization) {
+                        yesButton.Content = LocalizedDialogCommands.GetString(DialogBoxCommand.IDYES);
+                        noButton.Content = LocalizedDialogCommands.GetString(DialogBoxCommand.IDNO);
+                        cancelButton.Content = LocalizedDialogCommands.GetString(DialogBoxCommand.IDCANCEL);
+                    }
                     break;
             }
 
@@ -57,7 +78,6 @@ namespace ModernWpf {
 
             InvalidateMeasure();
         }
-
     }
 
 }

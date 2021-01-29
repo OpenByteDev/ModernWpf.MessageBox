@@ -18,10 +18,10 @@
             <TextBlock x:Name="messageText" TextWrapping="Wrap" Height="auto" MaxWidth="375" />
         </ui:SimpleStackPanel>
         <ui:SimpleStackPanel Orientation="Horizontal" Spacing="10" HorizontalAlignment="Center">
-            <Button x:Name="okButton" Content="Ok" Width="75" Visibility="Collapsed" />
-            <Button x:Name="yesButton" Content="Yes" Width="75" Visibility="Collapsed" />
-            <Button x:Name="noButton" Content="No" Width="75" Visibility="Collapsed" />
-            <Button x:Name="cancelButton" Content="Cancel" Width="75" Visibility="Collapsed" />
+            <Button x:Name="okButton" Content="Ok" MinWidth="75" Visibility="Collapsed" Padding="12 6 12 6" />
+            <Button x:Name="yesButton" Content="Yes" MinWidth="75" Visibility="Collapsed" Padding="12 6 12 6" />
+            <Button x:Name="noButton" Content="No" MinWidth="75" Visibility="Collapsed" Padding="12 6 12 6" />
+            <Button x:Name="cancelButton" Content="Cancel" MinWidth="75" Visibility="Collapsed" Padding="12 6 12 6" />
         </ui:SimpleStackPanel>
     </ui:SimpleStackPanel>
 </Window>
