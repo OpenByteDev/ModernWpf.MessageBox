@@ -5,7 +5,7 @@ using System.Windows;
 
 namespace ModernWpf {
     public static class MessageBox {
-        public static bool EnableLocalization = true;
+        public static bool EnableLocalization { get; set; } = true;
 
         public static MessageBoxResult? Show(string messageBoxText) =>
             Show(null, messageBoxText, null, null, null, null);
@@ -73,7 +73,7 @@ namespace ModernWpf {
             return window.Result ?? defaultResult;
         }
 
-        private static Window GetActiveWindow() =>
+        private static Window? GetActiveWindow() =>
             Application.Current.Windows.Cast<Window>().FirstOrDefault(window => window.IsActive);
     }
 }

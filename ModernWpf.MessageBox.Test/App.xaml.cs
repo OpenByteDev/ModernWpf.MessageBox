@@ -11,9 +11,10 @@ namespace ModernWpfMessageBox.Test {
 
             // MessageBox.Show(message, title, MessageBoxButton.YesNoCancel, MessageBoxImage.Question);
             // MessageBox.Show("adawdawda", title, MessageBoxButton.YesNoCancel, MessageBoxImage.Question);
-            Application.Current.ShutdownMode = ShutdownMode.OnExplicitShutdown;
+            ShutdownMode = ShutdownMode.OnExplicitShutdown;
             ModernWpf.MessageBox.Show("This is a test text!", "Some title", MessageBoxButton.YesNoCancel, MessageBoxImage.Question);
             ModernWpf.MessageBox.Show(message, title, MessageBoxButton.YesNoCancel, MessageBoxImage.Question);
+            Shutdown();
         }
 
     }

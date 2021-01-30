@@ -1,7 +1,6 @@
 ﻿namespace ModernWpf.Extensions {
     internal static class SymbolGlyphExtensions {
-        public static string ToGlyph(this SymbolGlyph symbol) {
-            return char.ConvertFromUtf32((int)symbol);
-        }
+        public static string ToGlyph(this SymbolGlyph symbol) =>
+            char.ConvertFromUtf32((int)symbol);
     }
 }
