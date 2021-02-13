@@ -11,7 +11,7 @@
     <RepositoryUrl>https://github.com/OpenByteDev/ModernWpf.MessageBox</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>WPF XAML UI Theme Controls Fluent Modern Metro WinUI</PackageTags>
-    <Version>0.4.0</Version>
+    <Version>0.4.1</Version>
   </PropertyGroup>
 
   <PropertyGroup>
