@@ -68,8 +68,9 @@ namespace ModernWpf {
         private static MessageBoxResult ShowInternal(Window? owner, string messageBoxText, string? caption, MessageBoxButton? button, string? glyph, MessageBoxResult defaultResult) =>
             ShowInternal(owner, messageBoxText, caption, button, glyph, defaultResult);
         private static MessageBoxResult? ShowInternal(Window? owner, string messageBoxText, string? caption, MessageBoxButton? button, string? glyph, MessageBoxResult? defaultResult) {
+            owner ??= GetActiveWindow();
             var window = new MessageBoxWindow(messageBoxText, caption ?? string.Empty, button ?? MessageBoxButton.OK, glyph) {
-                Owner = owner ?? GetActiveWindow()
+                Owner = owner
             };
             window.ShowDialog();
 
@@ -154,6 +155,9 @@ namespace ModernWpf {
 
 
         private static Window? GetActiveWindow() =>
-            Application.Current.Windows.Cast<Window>().FirstOrDefault(window => window.IsActive);
+            Application.Current.Windows.Cast<Window>()
+                .OrderByDescending(window => window.IsActive)
+                .ThenByDescending(window => window.WindowState != WindowState.Minimized)
+                .FirstOrDefault();
     }
 }
