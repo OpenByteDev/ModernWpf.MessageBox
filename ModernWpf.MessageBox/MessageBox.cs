@@ -1,13 +1,12 @@
-﻿using ModernWpf.Extensions;
-using ModernWpf.Controls;
-using System.Linq;
-using System.Windows;
+﻿using System.Linq;
 using System.Threading.Tasks;
+using System.Windows;
+using ModernWpf.Controls;
+using ModernWpf.Extensions;
 
 namespace ModernWpf {
     public static class MessageBox {
         public static bool EnableLocalization { get; set; } = true;
-
 
         #region Sync
         public static MessageBoxResult? Show(string messageBoxText) =>
@@ -77,7 +76,6 @@ namespace ModernWpf {
             return window.Result ?? defaultResult;
         }
         #endregion Sync
-
 
         #region Async
         public static Task<MessageBoxResult?> ShowAsync(string messageBoxText) =>
@@ -151,8 +149,7 @@ namespace ModernWpf {
 
             return taskSource.Task;
         }
-#endregion Async
-
+        #endregion Async
 
         private static Window? GetActiveWindow() =>
             Application.Current.Windows.Cast<Window>()

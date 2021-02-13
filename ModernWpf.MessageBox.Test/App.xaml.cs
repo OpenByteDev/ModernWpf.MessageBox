@@ -2,7 +2,6 @@
 
 namespace ModernWpfMessageBox.Test {
     public partial class App : Application {
-
         protected override void OnStartup(StartupEventArgs e) {
             base.OnStartup(e);
 
@@ -12,10 +11,10 @@ namespace ModernWpfMessageBox.Test {
             // MessageBox.Show(message, title, MessageBoxButton.YesNoCancel, MessageBoxImage.Question);
             // MessageBox.Show("adawdawda", title, MessageBoxButton.YesNoCancel, MessageBoxImage.Question);
             ShutdownMode = ShutdownMode.OnExplicitShutdown;
-            ModernWpf.MessageBox.Show("This is a test text!", "Some title", MessageBoxButton.YesNoCancel, MessageBoxImage.Question);
-            ModernWpf.MessageBox.Show(message, title, MessageBoxButton.YesNoCancel, MessageBoxImage.Question);
+            // ModernWpf.MessageBox.Show("This is a test text!", "Some title", MessageBoxButton.YesNoCancel, MessageBoxImage.Question);
+            // ModernWpf.MessageBox.Show(message, title, MessageBoxButton.YesNoCancel, MessageBoxImage.Question);
+            ModernWpf.MessageBox.ShowAsync(message, title, MessageBoxButton.YesNoCancel, MessageBoxImage.Question).GetAwaiter().GetResult();
             Shutdown();
         }
-
     }
 }
