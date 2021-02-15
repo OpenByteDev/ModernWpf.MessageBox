@@ -153,8 +153,6 @@ namespace ModernWpf {
 
         private static Window? GetActiveWindow() =>
             Application.Current.Windows.Cast<Window>()
-                .OrderByDescending(window => window.IsActive)
-                .ThenByDescending(window => window.WindowState != WindowState.Minimized)
-                .FirstOrDefault();
+                .FirstOrDefault(window => window.IsActive && window.ShowActivated);
     }
 }
