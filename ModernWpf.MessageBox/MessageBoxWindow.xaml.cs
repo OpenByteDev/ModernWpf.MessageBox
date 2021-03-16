@@ -4,7 +4,6 @@ using DialogBoxCommand = ModernWpf.LocalizedDialogCommands.DialogBoxCommand;
 
 namespace ModernWpf {
     public partial class MessageBoxWindow : Window {
-
         public MessageBoxResult? Result = null;
 
         public MessageBoxWindow(string messageBoxText, string caption, MessageBoxButton button, string? symbolGlyph) {
@@ -79,5 +78,4 @@ namespace ModernWpf {
             InvalidateMeasure();
         }
     }
-
 }
