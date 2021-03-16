@@ -71,7 +71,8 @@ namespace ModernWpf {
                 owner = GetActiveWindow();
 
             var window = new MessageBoxWindow(messageBoxText, caption ?? string.Empty, button ?? MessageBoxButton.OK, glyph) {
-                Owner = owner
+                Owner = owner,
+                WindowStartupLocation = owner is null ? WindowStartupLocation.CenterScreen : WindowStartupLocation.CenterOwner
             };
             window.ShowDialog();
 
