@@ -19,15 +19,20 @@ namespace ModernWpf {
                     if (MessageBox.EnableLocalization) {
                         okButton.Content = LocalizedDialogCommands.GetString(DialogBoxCommand.IDOK);
                     }
+
+                    okButton.Focus();
                     break;
                 case MessageBoxButton.OKCancel:
                     okButton.Visibility = Visibility.Visible;
                     cancelButton.Visibility = Visibility.Visible;
+                    cancelButton.IsCancel = true;
 
                     if (MessageBox.EnableLocalization) {
                         okButton.Content = LocalizedDialogCommands.GetString(DialogBoxCommand.IDOK);
                         cancelButton.Content = LocalizedDialogCommands.GetString(DialogBoxCommand.IDCANCEL);
                     }
+                    
+                    okButton.Focus();
                     break;
                 case MessageBoxButton.YesNo:
                     yesButton.Visibility = Visibility.Visible;
@@ -37,17 +42,22 @@ namespace ModernWpf {
                         yesButton.Content = LocalizedDialogCommands.GetString(DialogBoxCommand.IDYES);
                         noButton.Content = LocalizedDialogCommands.GetString(DialogBoxCommand.IDNO);
                     }
+
+                    yesButton.Focus();
                     break;
                 case MessageBoxButton.YesNoCancel:
                     yesButton.Visibility = Visibility.Visible;
                     noButton.Visibility = Visibility.Visible;
                     cancelButton.Visibility = Visibility.Visible;
+                    cancelButton.IsCancel = true;
 
                     if (MessageBox.EnableLocalization) {
                         yesButton.Content = LocalizedDialogCommands.GetString(DialogBoxCommand.IDYES);
                         noButton.Content = LocalizedDialogCommands.GetString(DialogBoxCommand.IDNO);
                         cancelButton.Content = LocalizedDialogCommands.GetString(DialogBoxCommand.IDCANCEL);
                     }
+
+                    yesButton.Focus();
                     break;
             }
 
