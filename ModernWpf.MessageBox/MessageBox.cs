@@ -4,10 +4,8 @@ using System.Windows;
 using ModernWpf.Controls;
 using ModernWpf.Extensions;
 
-namespace ModernWpf
-{
-    public static class MessageBox
-    {
+namespace ModernWpf {
+    public static class MessageBox {
         public static bool EnableLocalization { get; set; } = true;
 
         #region Sync
@@ -68,13 +66,14 @@ namespace ModernWpf
         public static MessageBoxResult? Show(Window? owner, bool lookForOwner, string messageBoxText, string? caption, MessageBoxButton? button, string? glyph, MessageBoxResult? defaultResult) =>
             ShowInternal(owner, lookForOwner, messageBoxText, caption, button, glyph, defaultResult);
 
-        private static MessageBoxResult? ShowInternal(Window? owner, bool lookForOwner, string messageBoxText, string? caption, MessageBoxButton? button, string? glyph, MessageBoxResult? defaultResult)
-        {
+#if !NET45 && !NET462
+        [return: System.Diagnostics.CodeAnalysis.NotNullIfNotNull("defaultResult")]
+#endif
+        private static MessageBoxResult? ShowInternal(Window? owner, bool lookForOwner, string messageBoxText, string? caption, MessageBoxButton? button, string? glyph, MessageBoxResult? defaultResult) {
             if (owner is null && lookForOwner)
                 owner = GetActiveWindow();
 
-            var window = new MessageBoxWindow(messageBoxText, caption ?? string.Empty, button ?? MessageBoxButton.OK, glyph)
-            {
+            var window = new MessageBoxWindow(messageBoxText, caption ?? string.Empty, button ?? MessageBoxButton.OK, glyph) {
                 Owner = owner,
                 WindowStartupLocation = owner is null ? WindowStartupLocation.CenterScreen : WindowStartupLocation.CenterOwner
             };
@@ -135,14 +134,15 @@ namespace ModernWpf
             ShowAsync(owner, messageBoxText, caption, button, image.ToSymbol(), defaultResult);
         public static Task<MessageBoxResult?> ShowAsync(Window? owner, string messageBoxText, string? caption, MessageBoxButton? button, MessageBoxImage image, MessageBoxResult? defaultResult) =>
             ShowAsync(owner, messageBoxText, caption, button, image.ToSymbol(), defaultResult);
-        public static Task<MessageBoxResult> ShowAsync(Window? owner, bool lookForOwner, string messageBoxText, string? caption, MessageBoxButton? button, string? glyph, MessageBoxResult defaultResult) =>
-            Task.FromResult(ShowAsyncInternal(owner, lookForOwner, messageBoxText, caption, button, glyph, defaultResult).Result ?? defaultResult);
-
+        public static async Task<MessageBoxResult> ShowAsync(Window? owner, bool lookForOwner, string messageBoxText, string? caption, MessageBoxButton? button, string? glyph, MessageBoxResult defaultResult) =>
+            (await ShowAsyncInternal(owner, lookForOwner, messageBoxText, caption, button, glyph, defaultResult)).Value;
         public static Task<MessageBoxResult?> ShowAsync(Window? owner, bool lookForOwner, string messageBoxText, string? caption, MessageBoxButton? button, string? glyph, MessageBoxResult? defaultResult) =>
             ShowAsyncInternal(owner, lookForOwner, messageBoxText, caption, button, glyph, defaultResult);
 
-        private static Task<MessageBoxResult?> ShowAsyncInternal(Window? owner, bool lookForOwner, string messageBoxText, string? caption, MessageBoxButton? button, string? glyph, MessageBoxResult? defaultResult)
-        {
+#if !NET45 && !NET462
+        [return: System.Diagnostics.CodeAnalysis.NotNullIfNotNull("defaultResult")]
+#endif
+        private static Task<MessageBoxResult?> ShowAsyncInternal(Window? owner, bool lookForOwner, string messageBoxText, string? caption, MessageBoxButton? button, string? glyph, MessageBoxResult? defaultResult) {
             var taskSource = new TaskCompletionSource<MessageBoxResult?>(
 #if !NET45
                 TaskCreationOptions.RunContinuationsAsynchronously
@@ -156,7 +156,7 @@ namespace ModernWpf
 
             return taskSource.Task;
         }
-        #endregion Async
+#endregion Async
 
         private static Window? GetActiveWindow() =>
             Application.Current.Windows.Cast<Window>()
