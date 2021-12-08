@@ -18,6 +18,8 @@ namespace ModernWpfMessageBox.Test {
             ModernWpf.MessageBox.Show("redadwada", null, MessageBoxButton.OK, Symbol.Admin);
             ModernWpf.MessageBox.Show("redadwada", null, MessageBoxButton.OK, SymbolGlyph.Airplane);
             ModernWpf.MessageBox.ShowAsync(message, title, MessageBoxButton.YesNoCancel, MessageBoxImage.Question).GetAwaiter().GetResult();
+            ModernWpf.MessageBox.EnableLocalization = false;
+            ModernWpf.MessageBox.ShowAsync("Press Alt and you should see underscores!", null, MessageBoxButton.YesNoCancel, MessageBoxImage.Hand).GetAwaiter().GetResult();
             Shutdown();
         }
     }
