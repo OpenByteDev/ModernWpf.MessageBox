@@ -17,7 +17,7 @@
   <PropertyGroup>
     <RootNamespace>ModernWpf</RootNamespace>
     <OutputType>Library</OutputType>
-    <TargetFrameworks>net45;net462;netcoreapp3.0;net5.0-windows10.0.18362</TargetFrameworks> <!--Mirroring the TargetFrameworks of ModernWpfUI-->
+    <TargetFrameworks>net452;net462;netcoreapp3.0;net5.0-windows10.0.18362</TargetFrameworks> <!--Mirroring the TargetFrameworks of ModernWpfUI-->
     <LangVersion>9.0</LangVersion>
     <NeutralLanguage>en-US</NeutralLanguage>
     <UseWPF>True</UseWPF>

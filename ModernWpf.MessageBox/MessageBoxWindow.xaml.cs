@@ -10,7 +10,8 @@ namespace ModernWpf {
             InitializeComponent();
 
             messageText.Text = messageBoxText;
-            Title = caption;
+            TitleText.Content = caption;
+            TitleText.Visibility = !string.IsNullOrEmpty(caption) ? Visibility.Visible : Visibility.Collapsed;
 
             switch (button) {
                 case MessageBoxButton.OK:
