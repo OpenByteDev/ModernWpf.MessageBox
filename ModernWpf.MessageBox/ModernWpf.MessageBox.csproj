@@ -1,31 +1,29 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
   <PropertyGroup>
-    <Company>OpenByte</Company>
-    <Authors>OpenByte</Authors>
-    <PackageId>ModernWpf.MessageBox</PackageId>
-    <Product>ModernWpf.MessageBox</Product>
-    <Description>An alternative to System.Windows.MessageBox using ModernWpfUI windows.</Description>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/OpenByteDev/ModernWpf.MessageBox</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/OpenByteDev/ModernWpf.MessageBox</RepositoryUrl>
+    <Authors>wherewhere</Authors>
+	<VersionPrefix>0.5.4</VersionPrefix>
     <RepositoryType>git</RepositoryType>
+    <Product>ModernWpf.MessageBox.Mica</Product>
+    <PackageId>ModernWpf.MessageBox.Mica</PackageId>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <PackageTags>WPF XAML UI Theme Controls Fluent Modern Metro WinUI</PackageTags>
-    <Version>0.5.1</Version>
+    <RepositoryUrl>https://github.com/wherewhere/ModernWpf.MessageBox</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/wherewhere/ModernWpf.MessageBox</PackageProjectUrl>
+    <Description>An alternative to System.Windows.MessageBox using ModernWpfUI windows.</Description>
   </PropertyGroup>
 
   <PropertyGroup>
-    <RootNamespace>ModernWpf</RootNamespace>
-    <OutputType>Library</OutputType>
-    <TargetFrameworks>net4.7.2;net4.8;netcoreapp3.1;net5.0-windows10.0.18362;net6.0-windows10.0.18362</TargetFrameworks> <!--Mirroring the TargetFrameworks of ModernWpfUI-->
-    <LangVersion>9.0</LangVersion>
-    <NeutralLanguage>en-US</NeutralLanguage>
     <UseWPF>True</UseWPF>
     <UseWinRT>True</UseWinRT>
     <Nullable>Enable</Nullable>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <EnableNETAnalyzers>True</EnableNETAnalyzers>
+    <OutputType>Library</OutputType>
+	<LangVersion>latest</LangVersion>
     <AnalysisLevel>Preview</AnalysisLevel>
+    <RootNamespace>ModernWpf</RootNamespace>
+    <EnableNETAnalyzers>True</EnableNETAnalyzers>
+    <TargetFrameworks>net4.7.2;net4.8;netcoreapp3.1;net5.0-windows10.0.18362;net6.0-windows10.0.18362;net7.0-windows10.0.18362</TargetFrameworks>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)'=='Release'">

@@ -1,14 +1,17 @@
-﻿using System.Windows;
-using ModernWpf;
+﻿using ModernWpf;
 using ModernWpf.Controls;
+using System.Windows;
 
-namespace ModernWpfMessageBox.Test {
-    public partial class App : Application {
-        protected override void OnStartup(StartupEventArgs e) {
+namespace ModernWpfMessageBox.Test
+{
+    public partial class App : Application
+    {
+        protected override void OnStartup(StartupEventArgs e)
+        {
             base.OnStartup(e);
 
-            var title = "Some title";
-            var message = "This is a looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong test text!";
+            string title = "Some title";
+            string message = "This is a looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong test text!";
 
             // MessageBox.Show(message, title, MessageBoxButton.YesNoCancel, MessageBoxImage.Question);
             // MessageBox.Show("adawdawda", title, MessageBoxButton.YesNoCancel, MessageBoxImage.Question);

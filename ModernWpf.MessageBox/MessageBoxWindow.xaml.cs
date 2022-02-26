@@ -1,8 +1,8 @@
-﻿using System;
+﻿using MicaWPF.Controls;
+using System;
 using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Interop;
-using MicaWPF.Controls;
 using DialogBoxCommand = ModernWpf.LocalizedDialogCommands.DialogBoxCommand;
 
 namespace ModernWpf
@@ -18,18 +18,21 @@ namespace ModernWpf
 
         public MessageBoxResult? Result = null;
 
-        public MessageBoxWindow(string messageBoxText, string caption, MessageBoxButton button, string? symbolGlyph) {
+        public MessageBoxWindow(string messageBoxText, string caption, MessageBoxButton button, string? symbolGlyph)
+        {
             InitializeComponent();
 
             messageText.Text = messageBoxText;
             TitleText.Content = caption;
             TitleText.Visibility = !string.IsNullOrEmpty(caption) ? Visibility.Visible : Visibility.Collapsed;
 
-            switch (button) {
+            switch (button)
+            {
                 case MessageBoxButton.OK:
                     okButton.Visibility = Visibility.Visible;
 
-                    if (MessageBox.EnableLocalization) {
+                    if (MessageBox.EnableLocalization)
+                    {
                         okButton.Content = LocalizedDialogCommands.GetString(DialogBoxCommand.IDOK);
                     }
 
@@ -40,18 +43,20 @@ namespace ModernWpf
                     cancelButton.Visibility = Visibility.Visible;
                     cancelButton.IsCancel = true;
 
-                    if (MessageBox.EnableLocalization) {
+                    if (MessageBox.EnableLocalization)
+                    {
                         okButton.Content = LocalizedDialogCommands.GetString(DialogBoxCommand.IDOK);
                         cancelButton.Content = LocalizedDialogCommands.GetString(DialogBoxCommand.IDCANCEL);
                     }
-                    
+
                     okButton.Focus();
                     break;
                 case MessageBoxButton.YesNo:
                     yesButton.Visibility = Visibility.Visible;
                     noButton.Visibility = Visibility.Visible;
 
-                    if (MessageBox.EnableLocalization) {
+                    if (MessageBox.EnableLocalization)
+                    {
                         yesButton.Content = LocalizedDialogCommands.GetString(DialogBoxCommand.IDYES);
                         noButton.Content = LocalizedDialogCommands.GetString(DialogBoxCommand.IDNO);
                     }
@@ -64,7 +69,8 @@ namespace ModernWpf
                     cancelButton.Visibility = Visibility.Visible;
                     cancelButton.IsCancel = true;
 
-                    if (MessageBox.EnableLocalization) {
+                    if (MessageBox.EnableLocalization)
+                    {
                         yesButton.Content = LocalizedDialogCommands.GetString(DialogBoxCommand.IDYES);
                         noButton.Content = LocalizedDialogCommands.GetString(DialogBoxCommand.IDNO);
                         cancelButton.Content = LocalizedDialogCommands.GetString(DialogBoxCommand.IDCANCEL);
@@ -79,7 +85,8 @@ namespace ModernWpf
             yesButton.Click += YesButton_Click;
             noButton.Click += NoButton_Click;
 
-            if (symbolGlyph is string glyph) {
+            if (symbolGlyph is string glyph)
+            {
                 symbolIcon.Visibility = Visibility.Visible;
                 symbolIcon.Glyph = glyph;
             }
@@ -90,12 +97,14 @@ namespace ModernWpf
         private void YesButton_Click(object sender, RoutedEventArgs e) => Close(MessageBoxResult.Yes);
         private void NoButton_Click(object sender, RoutedEventArgs e) => Close(MessageBoxResult.No);
 
-        public void Close(MessageBoxResult result) {
+        public void Close(MessageBoxResult result)
+        {
             Result = result;
             Close();
         }
 
-        protected override void OnSourceInitialized(EventArgs e) {
+        protected override void OnSourceInitialized(EventArgs e)
+        {
             base.OnSourceInitialized(e);
 
             InvalidateMeasure();

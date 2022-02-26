@@ -1,5 +1,7 @@
-﻿namespace ModernWpf {
-    public enum SymbolGlyph {
+﻿namespace ModernWpf
+{
+    public enum SymbolGlyph
+    {
         GlobalNavigationButton = 0xE700,
         Wifi = 0xE701,
         Bluetooth = 0xE702,

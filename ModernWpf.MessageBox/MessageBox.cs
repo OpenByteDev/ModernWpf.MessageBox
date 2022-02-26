@@ -1,11 +1,13 @@
-﻿using System.Linq;
+﻿using ModernWpf.Controls;
+using ModernWpf.Extensions;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
-using ModernWpf.Controls;
-using ModernWpf.Extensions;
 
-namespace ModernWpf {
-    public static class MessageBox {
+namespace ModernWpf
+{
+    public static class MessageBox
+    {
         public static bool EnableLocalization { get; set; } = true;
 
         #region Sync
@@ -69,11 +71,15 @@ namespace ModernWpf {
 #if !NET472 && !NET48
         [return: System.Diagnostics.CodeAnalysis.NotNullIfNotNull("defaultResult")]
 #endif
-        private static MessageBoxResult? ShowInternal(Window? owner, bool lookForOwner, string messageBoxText, string? caption, MessageBoxButton? button, string? glyph, MessageBoxResult? defaultResult) {
+        private static MessageBoxResult? ShowInternal(Window? owner, bool lookForOwner, string messageBoxText, string? caption, MessageBoxButton? button, string? glyph, MessageBoxResult? defaultResult)
+        {
             if (owner is null && lookForOwner)
+            {
                 owner = GetActiveWindow();
+            }
 
-            var window = new MessageBoxWindow(messageBoxText, caption ?? string.Empty, button ?? MessageBoxButton.OK, glyph) {
+            MessageBoxWindow? window = new MessageBoxWindow(messageBoxText, caption ?? string.Empty, button ?? MessageBoxButton.OK, glyph)
+            {
                 Owner = owner,
                 WindowStartupLocation = owner is null ? WindowStartupLocation.CenterScreen : WindowStartupLocation.CenterOwner
             };
@@ -142,21 +148,23 @@ namespace ModernWpf {
 #if !NET472 && !NET48
         [return: System.Diagnostics.CodeAnalysis.NotNullIfNotNull("defaultResult")]
 #endif
-        private static Task<MessageBoxResult?> ShowAsyncInternal(Window? owner, bool lookForOwner, string messageBoxText, string? caption, MessageBoxButton? button, string? glyph, MessageBoxResult? defaultResult) {
-            var taskSource = new TaskCompletionSource<MessageBoxResult?>(
+        private static Task<MessageBoxResult?> ShowAsyncInternal(Window? owner, bool lookForOwner, string messageBoxText, string? caption, MessageBoxButton? button, string? glyph, MessageBoxResult? defaultResult)
+        {
+            TaskCompletionSource<MessageBoxResult?>? taskSource = new TaskCompletionSource<MessageBoxResult?>(
 #if !NET452
                 TaskCreationOptions.RunContinuationsAsynchronously
 #endif
             );
 
-            Application.Current.Dispatcher.Invoke(() => {
-                var result = ShowInternal(owner, lookForOwner, messageBoxText, caption, button, glyph, defaultResult);
+            Application.Current.Dispatcher.Invoke(() =>
+            {
+                MessageBoxResult? result = ShowInternal(owner, lookForOwner, messageBoxText, caption, button, glyph, defaultResult);
                 taskSource.TrySetResult(result);
             });
 
             return taskSource.Task;
         }
-#endregion Async
+        #endregion Async
 
         private static Window? GetActiveWindow() =>
             Application.Current.Windows.Cast<Window>()
