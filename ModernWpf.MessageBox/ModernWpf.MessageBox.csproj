@@ -1,31 +1,24 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
   <PropertyGroup>
-    <Company>OpenByte</Company>
-    <Authors>OpenByte</Authors>
-    <PackageId>ModernWpf.MessageBox</PackageId>
-    <Product>ModernWpf.MessageBox</Product>
+    <Authors>wherewhere</Authors>
     <Description>An alternative to System.Windows.MessageBox using ModernWpfUI windows.</Description>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/OpenByteDev/ModernWpf.MessageBox</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/OpenByteDev/ModernWpf.MessageBox</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
-    <PackageTags>WPF XAML UI Theme Controls Fluent Modern Metro WinUI</PackageTags>
-    <Version>0.5.1</Version>
-  </PropertyGroup>
-
-  <PropertyGroup>
-    <RootNamespace>ModernWpf</RootNamespace>
-    <OutputType>Library</OutputType>
-    <TargetFrameworks>net45;net462;netcoreapp3.0;net5.0-windows10.0.18362</TargetFrameworks> <!--Mirroring the TargetFrameworks of ModernWpfUI-->
-    <LangVersion>9.0</LangVersion>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <IncludeSymbols>True</IncludeSymbols>
+    <LangVersion>latest</LangVersion>
     <NeutralLanguage>en-US</NeutralLanguage>
-    <UseWPF>True</UseWPF>
-    <UseWinRT>True</UseWinRT>
-    <Nullable>Enable</Nullable>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <EnableNETAnalyzers>True</EnableNETAnalyzers>
-    <AnalysisLevel>Preview</AnalysisLevel>
+    <PackageId>ModernWpf.MessageBox.Mica</PackageId>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/wherewhere/ModernWpf.MessageBox</PackageProjectUrl>
+    <PackageTags>WPF XAML UI Theme Controls Fluent Modern Metro WinUI</PackageTags>
+    <Product>ModernWpf.MessageBox.Mica</Product>
+	<RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/wherewhere/ModernWpf.MessageBox</RepositoryUrl>
+    <RootNamespace>ModernWpf</RootNamespace>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <TargetFrameworks>net4.5.2;net4.6.2;netcoreapp3.1;net5.0-windows10.0.18362.0</TargetFrameworks>
+    <UseWPF>true</UseWPF>
+	<VersionPrefix>0.5.5</VersionPrefix>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)'=='Release'">
@@ -33,7 +26,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="ModernWpfUI" Version="0.9.4" />
+    <PackageReference Include="ModernWpfUI" Version="0.9.6" />
   </ItemGroup>
 
 </Project>

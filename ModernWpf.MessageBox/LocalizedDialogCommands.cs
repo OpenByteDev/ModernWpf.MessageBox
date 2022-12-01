@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-namespace ModernWpf {
-    internal static class LocalizedDialogCommands {
-        public static string GetString(DialogBoxCommand command) {
+namespace ModernWpf
+{
+    internal static class LocalizedDialogCommands
+    {
+        public static string GetString(DialogBoxCommand command)
+        {
             return Marshal.PtrToStringAuto(MB_GetString((int)command))?.TrimStart('&')!;
         }
 
@@ -18,7 +21,8 @@ namespace ModernWpf {
         /// <summary>
         /// Represents possible dialogbox command id values by the MB_GetString function.
         /// </summary>
-        public enum DialogBoxCommand : int {
+        public enum DialogBoxCommand : int
+        {
             IDOK = 0,
             IDCANCEL = 1,
             IDABORT = 2,

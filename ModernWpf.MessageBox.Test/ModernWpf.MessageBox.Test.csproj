@@ -2,9 +2,8 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFrameworks>net45;net462;netcoreapp3.0;net5.0-windows10.0.18362</TargetFrameworks>
+    <TargetFramework>net6.0-windows10.0.18362.0</TargetFramework>
     <UseWPF>True</UseWPF>
-    <StartupObject></StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
